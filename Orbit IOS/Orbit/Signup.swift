@@ -279,7 +279,7 @@ class Signup: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
     
     func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {

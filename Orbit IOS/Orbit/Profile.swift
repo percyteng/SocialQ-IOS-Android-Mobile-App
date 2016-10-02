@@ -89,7 +89,7 @@ class Profile: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         self.view.addSubview(popOverVC.view)
         popOverVC.didMoveToParentViewController(self)
     }
-    func get(completion:(value: NSArray) -> Void){
+    func get(completion:(_: NSArray) -> Void){
         let request = NSMutableURLRequest(URL: NSURL(string: "http://www.percyteng.com/orbit/getAllposts.php")!)
         request.HTTPMethod = "POST"
         let postString = "user=ios"
@@ -117,7 +117,7 @@ class Profile: UIViewController, UITableViewDelegate, UITableViewDataSource  {
                 self.values = temp as NSArray
                 self.tableView?.reloadData();
             }
-            completion(value: array)
+            completion(array)
         }
         task.resume()
     }
