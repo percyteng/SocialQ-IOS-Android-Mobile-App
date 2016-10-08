@@ -21,7 +21,6 @@ class Signin: UIViewController {
         self.view.endEditing(true)
     }
     func get(completion:(value: NSDictionary) -> Void){
-        
         let request = NSMutableURLRequest(URL: NSURL(string: "http://www.percyteng.com/orbit/login.php")!)
         request.HTTPMethod = "POST"
         let postString = "useremail=\(email.text!)&password=\(password.text!)"
@@ -42,6 +41,8 @@ class Signin: UIViewController {
 
 
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                print("we in there")
+
                 if result == 1{
                     let username: NSString = (responseString!["user"] as? NSString)!
 

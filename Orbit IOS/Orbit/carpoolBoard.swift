@@ -18,6 +18,7 @@ class carpoolBoard: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("dude used to call me")
         username = tempUser.username
         self.showAnimate()
         self.resultSearchController = ({
@@ -123,6 +124,9 @@ class carpoolBoard: UIViewController, UITableViewDelegate, UITableViewDataSource
             
             print("response = \(response)")
             let responseString = try! NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+            if responseString!["success"] as! Int == 0{
+                return
+            }
             let array:NSArray = responseString!["rides"] as! NSArray
             var temp = NSMutableArray()
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in

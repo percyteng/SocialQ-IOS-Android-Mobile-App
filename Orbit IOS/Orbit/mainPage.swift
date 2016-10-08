@@ -35,7 +35,6 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
         get()
     }
     func backFromBoard(){
-        print("got it")
         get()
     }
     func refreshVCyoo(notification:NSNotification){
@@ -70,7 +69,6 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
             temp.addObject(ele)
         }
         values = temp as NSArray
-        print("aight\(values)")
         tableView.reloadData()
         get()
         //        self.presentingViewController!.dismissViewControllerAnimated(true, completion: {});
@@ -172,25 +170,15 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             print("response = \(response)")
             let responseString = try! NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+            if responseString!["success"] as! Int == 0{
+                return
+            }
             let array:NSArray = responseString!["all"] as! NSArray
 //            let array = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
             
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
                 self.values = array
                 self.tableView?.reloadData();
-//                        var i = 0
-//                
-//                        if self.continued{
-//                        while i < 20{
-//                            let category = self.values[self.values.count-1-i]["category"] as! String;
-//                            let price = self.values[self.values.count-1-i]["price"] as! String;
-//                            let user = self.values[self.values.count-1-i]["username"] as! String
-//                            let notes = self.values[self.values.count-1-i]["notes"] as! String;
-//                            self.getComments(notes, price: price, category: category, user: user, index:i)
-//                            i += 1
-//                        }
-//                        }
-//                        self.continued = false
 
             }
         }
@@ -277,8 +265,8 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as!postCell
 
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as!postCell
         let maindata = values[values.count-1-indexPath.row]
 
         if maindata["category"] as? String == "Services"{

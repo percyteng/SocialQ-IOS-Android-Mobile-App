@@ -71,7 +71,6 @@ class createRideshare: UIViewController {
 
     }
     @IBAction func post(sender: AnyObject) {
-        
         if location.text!.isEmpty{
             let alert = UIAlertController(title: "Invalid Location", message:"Please enter a pick up location", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
@@ -103,8 +102,9 @@ class createRideshare: UIViewController {
             print("response = \(response)")
             
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("responseString = \(responseString)")
+            print("responseString")
         }
+
         task.resume()
             NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil,userInfo:["first":location.text!,
                 "second":cost.text!,

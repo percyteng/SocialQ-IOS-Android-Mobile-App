@@ -65,6 +65,9 @@ class Inbox: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             print("response = \(response)")
             let responseString = try! NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+            if responseString!["success"] as! Int == 0{
+                return
+            }
             let array:NSArray = responseString!["all"] as! NSArray
             var temp = NSMutableArray()
             //            let array = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray

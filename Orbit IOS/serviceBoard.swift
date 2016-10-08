@@ -130,9 +130,13 @@ class serviceBoard: UIViewController, UITableViewDelegate, UITableViewDataSource
                 print("error=\(error)")
                 return
             }
-            
+
             print("response = \(response)")
             let responseString = try! NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+            print("responseString = \(responseString!["success"])")
+            if responseString!["success"] as! Int == 0{
+                return
+            }
             let array:NSArray = responseString!["services"] as! NSArray
             var temp = NSMutableArray()
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
@@ -141,8 +145,7 @@ class serviceBoard: UIViewController, UITableViewDelegate, UITableViewDataSource
                         temp.addObject(ele)
                     }
                 }
-                
-                self.values = temp as NSArray
+                    self.values = temp as NSArray
                 self.tableView?.reloadData();
             }
         }
@@ -192,6 +195,7 @@ class serviceBoard: UIViewController, UITableViewDelegate, UITableViewDataSource
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         if (self.resultSearchController.active && resultSearchController.searchBar.text != "") {
             return self.filteredTableData.count
         }

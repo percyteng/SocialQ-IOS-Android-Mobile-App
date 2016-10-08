@@ -121,6 +121,9 @@ class subletBoard: UIViewController, UITableViewDelegate, UITableViewDataSource,
             
             print("response = \(response)")
             let responseString = try! NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+            if responseString!["success"] as! Int == 0{
+                return
+            }
             let array:NSArray = responseString!["subletting"] as! NSArray
             var temp = NSMutableArray()
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
