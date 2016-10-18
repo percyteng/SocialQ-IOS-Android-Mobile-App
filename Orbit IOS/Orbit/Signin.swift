@@ -11,9 +11,12 @@ import UIKit
 class Signin: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    var myActivityIndicator:UIActivityIndicatorView!
+
     @IBAction func loginButton(sender: AnyObject) {
         self.email.resignFirstResponder()
         self.password.resignFirstResponder()
+
         get{(value) in
         }
     }
@@ -21,6 +24,9 @@ class Signin: UIViewController {
         self.view.endEditing(true)
     }
     func get(completion:(value: NSDictionary) -> Void){
+
+        myActivityIndicator = ActivityIndicator().StartActivityIndicator(self);
+        myActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
         let request = NSMutableURLRequest(URL: NSURL(string: "http://www.percyteng.com/orbit/login.php")!)
         request.HTTPMethod = "POST"
         let postString = "useremail=\(email.text!)&password=\(password.text!)"
@@ -52,11 +58,14 @@ class Signin: UIViewController {
                     let next = self.storyboard?.instantiateViewControllerWithIdentifier("reveal") as! SWRevealViewController
                     next.loadView()
 
+                    ActivityIndicator().StopActivityIndicator(self,indicator: self.myActivityIndicator);
 
                     self.presentViewController(next, animated: true, completion: nil)
                     
                 }
                 else {
+                    ActivityIndicator().StopActivityIndicator(self,indicator: self.myActivityIndicator);
+
                     let alert = UIAlertController(title: "Wrong Information!", message:"Please enter the correct username and password", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
                     self.presentViewController(alert, animated: true){}

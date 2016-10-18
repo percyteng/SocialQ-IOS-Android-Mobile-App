@@ -24,6 +24,7 @@ class createEvent: UIViewController {
         profile.layer.masksToBounds = false
         username = tempUser.username
         nameTag.text = username
+        self.view.layoutIfNeeded()
         profile.layer.cornerRadius = profile.frame.size.width/2
         profile.clipsToBounds = true
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)

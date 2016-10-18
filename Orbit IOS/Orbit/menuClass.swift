@@ -18,12 +18,17 @@ class menuClass: UIViewController {
         profile.layer.borderWidth = 1
         username = tempUser.username
         if let url = NSURL(string: "http://percyteng.com/orbit/pictures/\(username).JPG") {
+
             if let data = NSData(contentsOfURL: url) {
                 profile.image = UIImage(data: data)
+                print("diabolo")
+
             }
         }
-        profile.layer.masksToBounds = false
+        self.view.layoutIfNeeded()
         profile.layer.cornerRadius = profile.frame.size.width/2
+        profile.layer.masksToBounds = false
+
         profile.clipsToBounds = true
         // Do any additional setup after loading the view, typically from a nib.
     }

@@ -17,9 +17,12 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var username = String()
     @IBOutlet weak var Open: UIBarButtonItem!
     var continued:Bool = true
+    var myActivityIndicator:UIActivityIndicatorView!
+
     var commentArray:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+
         username = tempUser.username
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -30,6 +33,8 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(mainPage.refreshVCyoo), name:"refreshyoo", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(mainPage.backFromBoard), name:"back", object: nil)
       
+    }
+    override func viewDidAppear(animated: Bool) {
     }
      override func viewWillAppear(animated: Bool) {
         get()
@@ -156,6 +161,8 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
         popOverVC.didMoveToParentViewController(self)
     }
     func get(){
+        myActivityIndicator = ActivityIndicator().StartActivityIndicator(self);
+
         let request = NSMutableURLRequest(URL: NSURL(string: "http://www.percyteng.com/orbit/getAllposts.php")!)
         request.HTTPMethod = "POST"
         let postString = "user=ios"
@@ -173,17 +180,19 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if responseString!["success"] as! Int == 0{
                 return
             }
+
             let array:NSArray = responseString!["all"] as! NSArray
 //            let array = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
             
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
                 self.values = array
                 self.tableView?.reloadData();
-
+                        ActivityIndicator().StopActivityIndicator(self,indicator: self.myActivityIndicator);
             }
         }
         task.resume()
-        
+
+
 
 //        let url = NSURL(string: "http://percyteng.com/orbit/getAllpostsTest.php")
 //        let data = NSData(contentsOfURL: url!)
@@ -342,7 +351,7 @@ class mainPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        
         let maindata = values[values.count-1-indexPath.row]
         let category = maindata["category"] as! String;
         let price = maindata["price"] as! String;

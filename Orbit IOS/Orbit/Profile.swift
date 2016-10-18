@@ -16,6 +16,8 @@ class Profile: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet weak var profile: UIImageView!
     @IBOutlet weak var Open: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
+    var data: NSData?
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class Profile: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         username = tempUser.username
 
         bio.text = tempUser.descript
+        self.view.layoutIfNeeded()
+
         profile.layer.borderWidth = 1
         profile.layer.masksToBounds = false
         profile.layer.cornerRadius = profile.frame.size.width/2
@@ -33,11 +37,16 @@ class Profile: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         }
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
-        if let url = NSURL(string: "http://percyteng.com/orbit/pictures/\(username).JPG") {
-            if let data = NSData(contentsOfURL: url) {
-                profile.image = UIImage(data: data)
-            }        
+        let url = NSURL(string: "http://percyteng.com/orbit/pictures/\(username).JPG")
+        let data = NSData(contentsOfURL:url!)
+
+        if data != nil {
+            profile.image = UIImage(data:data!)
+        } else {
+            // In this when data is nil or empty then we can assign a placeholder image
+            profile.image = UIImage(named: "ic_account_circle_white_3x.png")
         }
+        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     

@@ -113,10 +113,12 @@ class Inbox: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let maindata = values[values.count-1-indexPath.row]
         if let url = NSURL(string: "http://percyteng.com/orbit/pictures/\(maindata["fromText"] as! String).JPG") {
             if let data = NSData(contentsOfURL: url) {
+                print("can i kick it")
+
                 cell.messageImage.image = UIImage(data: data)
             }
         }
-//        cell.messageImage.image = UIImage(named: "tile_events")
+
         cell.titleTXT.text = maindata["subject"] as! String
         cell.targetTXT.text = "From: \(maindata["fromText"] as! String)"
         cell.timeStamp.text = maindata["time"] as! String

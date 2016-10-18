@@ -50,6 +50,10 @@ class Outbox: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewWillAppear(animated: Bool) {
         get()
     }
+    override func viewDidAppear(animated: Bool) {
+        ActivityIndicator().StopActivityIndicator(self,indicator: myActivityIndicator);
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

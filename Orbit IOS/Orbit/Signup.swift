@@ -20,6 +20,8 @@ class Signup: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
     @IBOutlet weak var realImage: UIImageView!
     var schoolName = String()
     @IBOutlet weak var school: UIPickerView!
+    var myActivityIndicator:UIActivityIndicatorView!
+
     @IBAction func signup(sender: AnyObject) {
         if name.text!.isEmpty{
             let alert = UIAlertController(title: "Invalid Name", message:"Please enter a user name", preferredStyle: .Alert)
@@ -63,6 +65,8 @@ class Signup: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
         self.name.resignFirstResponder()
     }
     func process(){
+        myActivityIndicator = ActivityIndicator().StartActivityIndicator(self);
+        myActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
         let request = NSMutableURLRequest(URL: NSURL(string: "http://www.percyteng.com/orbit/newUserTest.php")!)
         request.HTTPMethod = "POST"
         let postString = "useremail=\(email.text!)&password=\(password.text!)&username=\(name.text!)&school=\(schoolName)"
@@ -85,7 +89,8 @@ class Signup: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
             let resultMessage:NSString = (responseString!["message"] as? NSString)!
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
                 if result == 1{
-                    
+
+                    ActivityIndicator().StopActivityIndicator(self,indicator: self.myActivityIndicator);
                     self.myImageUploadRequest()
 //                    tempUser.username = self.name.text!
 //                    tempUser.descript = ""
@@ -96,6 +101,8 @@ class Signup: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
                     
                 }
                 else {
+                    ActivityIndicator().StopActivityIndicator(self,indicator: self.myActivityIndicator);
+
                     let alert = UIAlertController(title: "Invalid Input", message:resultMessage as String, preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
                     self.presentViewController(alert, animated: true){}

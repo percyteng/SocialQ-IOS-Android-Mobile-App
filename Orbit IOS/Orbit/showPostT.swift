@@ -34,7 +34,8 @@ class showPostT: UIViewController,UITextViewDelegate {
     @IBOutlet weak var commentBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.layoutIfNeeded()
+
         notes.sizeToFit()
         profile.layer.borderWidth = 1
         username = tempUser.username

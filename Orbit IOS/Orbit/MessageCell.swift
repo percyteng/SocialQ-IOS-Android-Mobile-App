@@ -22,6 +22,8 @@ class MessageCell: UITableViewCell {
     var content = String()
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layoutIfNeeded()
+
         messageImage.layer.borderWidth = 1
 
         messageImage.layer.masksToBounds = false

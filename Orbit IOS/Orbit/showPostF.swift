@@ -37,6 +37,7 @@ class showPostF: UIViewController {
         
         profile.layer.borderWidth = 1
         postUser.text = tempPost.postUser
+        self.view.layoutIfNeeded()
 
         profile.layer.masksToBounds = false
         profile.layer.cornerRadius = profile.frame.size.width/2

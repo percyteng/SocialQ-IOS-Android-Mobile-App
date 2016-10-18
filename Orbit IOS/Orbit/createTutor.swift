@@ -22,6 +22,7 @@ class createTutor: UIViewController {
         super.viewDidLoad()
         profile.layer.borderWidth = 1
         username = tempUser.username
+        self.view.layoutIfNeeded()
         profile.layer.masksToBounds = false
         profile.layer.cornerRadius = profile.frame.size.width/2
         profile.clipsToBounds = true
