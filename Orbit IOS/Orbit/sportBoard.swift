@@ -110,6 +110,9 @@ class sportBoard: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 
     }
 
+    @IBAction func refresh(sender: AnyObject) {
+        get()
+    }
     func get(){
         let request = NSMutableURLRequest(URL: NSURL(string: "http://www.percyteng.com/orbit/getSports.php")!)
         request.HTTPMethod = "POST"

@@ -110,6 +110,10 @@ class exchangeBoard: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     }
 
+    @IBAction func refresh(sender: AnyObject) {
+        get()
+    }
+ 
     func get(){
         let request = NSMutableURLRequest(URL: NSURL(string: "http://www.percyteng.com/orbit/getExchange.php")!)
         request.HTTPMethod = "POST"
