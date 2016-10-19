@@ -1,5 +1,6 @@
 package hackers.orbit.orbit;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -17,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -62,6 +64,9 @@ public class Signin extends AppCompatActivity implements View.OnClickListener{
         signUp = (TextView) findViewById(R.id.signUp);
         etUsername = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
+        onFocusChange(etUsername);
+        onFocusChange(etPassword);
+
         signUp.setOnClickListener(this);
         bLogin.setOnClickListener(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -69,6 +74,21 @@ public class Signin extends AppCompatActivity implements View.OnClickListener{
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.parseColor("#383858"));
         }
+    }
+
+    public void onFocusChange(EditText editChange) {
+        editChange.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     public void volleySchool(){
         // Instantiate the cache
@@ -225,6 +245,7 @@ public class Signin extends AppCompatActivity implements View.OnClickListener{
 //            startActivity(i);
         }
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

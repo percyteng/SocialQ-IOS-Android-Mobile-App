@@ -2,9 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient"
     android:layout_height="match_parent">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/app_bar"
         android:background="#2B3856"
@@ -13,9 +16,11 @@
         app:popupTheme="@style/AppTheme.PopupOverlay" >
         <ImageButton
             android:layout_width="20dp"
+            android:id="@+id/back"
             android:layout_height="20dp"
             android:background="@drawable/ic_back"/>
     </android.support.v7.widget.Toolbar>
+
     <RelativeLayout
         android:id="@+id/uploadPhoto"
         android:layout_below="@id/app_bar"

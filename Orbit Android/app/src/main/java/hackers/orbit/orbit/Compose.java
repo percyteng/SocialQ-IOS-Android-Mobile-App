@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -60,6 +61,10 @@ public class Compose extends Activity implements View.OnClickListener{
         etTo = (TextView) findViewById(R.id.etTo);
         etSubject = (EditText) findViewById(R.id.etSubject);
         etContent = (EditText) findViewById(R.id.etContent);
+
+        onFocusChange(etSubject);
+        onFocusChange(etContent);
+
         back = (ImageView) findViewById(R.id.back);
         composeButton = (ImageButton) findViewById(R.id.composeButton);
         etTo.setText("To: " + username);
@@ -81,6 +86,20 @@ public class Compose extends Activity implements View.OnClickListener{
                         dialog.dismiss();
                     }
                 }).create().show();
+    }
+    public void onFocusChange(EditText editChange) {
+        editChange.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     public void sendMessage(final int hour, final String minute){
         // Instantiate the cache

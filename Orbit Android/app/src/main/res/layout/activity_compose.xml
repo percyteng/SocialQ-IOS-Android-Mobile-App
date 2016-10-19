@@ -3,11 +3,14 @@
     android:layout_height="match_parent"
     android:background="#f2eeee"
     android:orientation="vertical"
+
     android:layout_width="match_parent">
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="70dp"
         android:layout_width="match_parent"
         android:background="@drawable/gradient"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
         android:id="@+id/app_bar"
         android:minHeight="?android:attr/actionBarSize"
         android:theme="@style/AppTheme">

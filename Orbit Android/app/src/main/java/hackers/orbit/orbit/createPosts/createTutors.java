@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -70,6 +71,12 @@ public class createTutors extends Activity implements View.OnClickListener{
         locationText = (EditText) findViewById(R.id.locationText);
         costText = (EditText) findViewById(R.id.costText);
         notesText = (EditText) findViewById(R.id.notesText);
+
+        onFocusChange(subjectText);
+        onFocusChange(locationText);
+        onFocusChange(costText);
+        onFocusChange(notesText);
+
         submitButton = (Button) findViewById(R.id.submitButton);
         submitButton.setOnClickListener(this);
         Bundle bundle = getIntent().getExtras();
@@ -77,6 +84,20 @@ public class createTutors extends Activity implements View.OnClickListener{
         userSchool = bundle.getString("school");
         name.setText(username);
         getImages();
+    }
+    public void onFocusChange(EditText editChange) {
+        editChange.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     public void getImages(){
         String url = "http://percyteng.com/orbit/pictures/" + username +".JPG";

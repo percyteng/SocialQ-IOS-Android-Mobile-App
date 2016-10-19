@@ -1,6 +1,7 @@
 package hackers.orbit.orbit;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -17,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -85,6 +87,7 @@ public class Comments extends AppCompatActivity implements View.OnClickListener 
         notesText = (TextView) findViewById(R.id.notesText);
         imageIcon = (ImageButton) findViewById(R.id.imageIcon);
         edComments = (EditText) findViewById(R.id.edComments);
+        onFocusChange(edComments);
         schoolText = (TextView) findViewById(R.id.schoolText);
         Bundle bundle = getIntent().getExtras();
 
@@ -160,6 +163,20 @@ public class Comments extends AppCompatActivity implements View.OnClickListener 
 
         getComments();
         getImages();
+    }
+    public void onFocusChange(EditText editChange) {
+        editChange.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     public void alert(String message){
         new AlertDialog.Builder(this)

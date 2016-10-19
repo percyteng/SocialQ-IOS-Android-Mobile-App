@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -70,6 +71,12 @@ public class createEvents extends Activity implements  View.OnClickListener{
         costText = (EditText) findViewById(R.id.costText);
         notesText = (EditText) findViewById(R.id.notesText);
         eventText = (EditText) findViewById(R.id.eventText);
+
+        onFocusChange(locationText);
+        onFocusChange(costText);
+        onFocusChange(notesText);
+        onFocusChange(eventText);
+
         submitButton = (Button) findViewById(R.id.submitButton);
         submitButton.setOnClickListener(this);
         Bundle bundle = getIntent().getExtras();
@@ -94,6 +101,20 @@ public class createEvents extends Activity implements  View.OnClickListener{
             }
         });
         Volley.newRequestQueue(this).add(imgRequest);
+    }
+    public void onFocusChange(EditText editChange) {
+        editChange.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     public void postVolley(){
     // Instantiate the cache

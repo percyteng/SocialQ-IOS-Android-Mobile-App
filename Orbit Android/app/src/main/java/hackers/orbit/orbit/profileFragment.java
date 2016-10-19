@@ -1,5 +1,6 @@
 package hackers.orbit.orbit;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.ProgressDialog;
@@ -14,6 +15,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -77,6 +79,8 @@ public class profileFragment extends Fragment implements View.OnClickListener {
                 new InputFilter.LengthFilter(200)
         });
 
+        onFocusChange(etDescription);
+
         changePassword.setOnClickListener(this);
         imgCheck = (ImageView) myFragmentView.findViewById(R.id.imgCheck);
         imgCheck.setOnClickListener(this);
@@ -86,6 +90,22 @@ public class profileFragment extends Fragment implements View.OnClickListener {
         getVolley();
 
         return myFragmentView;
+    }
+    public void onFocusChange(EditText editChange) {
+        editChange.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                System.out.println("holaa");
+
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 //    @Override
 //    public void onBackPressed() {

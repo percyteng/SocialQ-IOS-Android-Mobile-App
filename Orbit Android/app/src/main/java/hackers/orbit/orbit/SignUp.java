@@ -1,5 +1,6 @@
 package hackers.orbit.orbit;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -16,6 +17,7 @@ import android.util.Base64;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -52,6 +54,7 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener{
     String school = "QUEENS";
     private Bitmap bitmap = null;
     ImageButton camera;
+    ImageButton back;
     final int QUEENS = 0;
     final int UWO = 1;
     final int UOT = 2;
@@ -73,10 +76,16 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener{
             window.setStatusBarColor(Color.parseColor("#383858"));
         }
         imageView = (ImageView) findViewById(R.id.imageView);
+        back = (ImageButton) findViewById(R.id.back);
         imageView.setOnClickListener(this);
+        back.setOnClickListener(this);
         etName = (EditText) findViewById(R.id.etName);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
+
+        onFocusChange(etName);
+        onFocusChange(etEmail);
+        onFocusChange(etPassword);
 
         camera= (ImageButton) findViewById(R.id.camera);
         addPhoto = (TextView) findViewById(R.id.addPhoto);
@@ -114,6 +123,20 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener{
             }
 
         });
+    }
+    public void onFocusChange(EditText editChange) {
+        editChange.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     private void showFileChooser() {
         Intent intent = new Intent();
@@ -263,7 +286,9 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener{
             case R.id.imageView:
                 showFileChooser();
                 break;
-
+            case R.id.back:
+                Intent i = new Intent(this, Signin.class);
+                startActivity(i);
         }
     }
 }
