@@ -154,11 +154,11 @@ public class inbox extends Fragment {
                             if (result == 1) {
                                 Toast.makeText(getActivity().getBaseContext(), "Message deleted",
                                         Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(getActivity(), newInbox.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString("username", username);
-//                                Fragment inbox = new inboxClass();
-//                                inbox.setArguments(bundle);
-//                                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, inbox).commit();
+                                i.putExtras(bundle);
+                                startActivity(i);
                                 proDia.dismiss();
                             }
                             else {

@@ -23,19 +23,20 @@
             android:layout_marginLeft="30dp"
             android:textSize="20dp"/>
     </android.support.v7.widget.Toolbar>
-    <ScrollView
-        android:layout_below="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
             <LinearLayout
+                android:layout_below="@+id/app_bar"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:id="@+id/container"
                 android:layout_height="wrap_content"
                 android:background="#eceef2">
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:hint="Search"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -45,6 +46,11 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="8dp"/>
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ListView>
                 <!--<RelativeLayout-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="wrap_content"-->
@@ -357,8 +363,6 @@
                         <!--android:layout_marginBottom="20dp"/>-->
                 <!--</RelativeLayout>-->
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
     <ImageButton
         android:layout_width="60dp"
         android:id="@+id/createPost"

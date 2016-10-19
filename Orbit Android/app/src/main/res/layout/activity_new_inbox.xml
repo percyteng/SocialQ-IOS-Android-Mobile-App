@@ -22,6 +22,14 @@
             android:text="Messages"
             android:layout_marginLeft="30dp"
             android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/refreshIcon"
+            android:background="@drawable/refresh"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="24dp" />
     </android.support.v7.widget.Toolbar>
     <TabHost
         android:layout_marginTop="70dp"

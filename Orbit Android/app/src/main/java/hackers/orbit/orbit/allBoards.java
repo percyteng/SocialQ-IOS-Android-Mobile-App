@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import hackers.orbit.orbit.Boards.carPoolBoard;
+
 /**
  * Created by percy on 2016/3/5.
  */
@@ -52,42 +54,42 @@ public class allBoards extends Fragment implements  View.OnClickListener {
         switch (v.getId()) {
             case R.id.subletBoard:
                 Intent intent = new Intent(getActivity().getBaseContext(),
-                        subletBoard.class);
+                        hackers.orbit.orbit.Boards.subletBoard.class);
                 intent.putExtra("username", username);
                 intent.putExtra("school", userSchool);
                 getActivity().startActivity(intent);
                 break;
             case R.id.serviceBoard:
                 Intent intent1 = new Intent(getActivity().getBaseContext(),
-                        serviceBoard.class);
+                        hackers.orbit.orbit.Boards.serviceBoard.class);
                 intent1.putExtra("username", username);
                 intent1.putExtra("school", userSchool);
                 getActivity().startActivity(intent1);
                 break;
             case R.id.tutorBoard:
                 Intent intent2 = new Intent(getActivity().getBaseContext(),
-                        tutorBoard.class);
+                        hackers.orbit.orbit.Boards.tutorBoard.class);
                 intent2.putExtra("username", username);
                 intent2.putExtra("school", userSchool);
                 getActivity().startActivity(intent2);
                 break;
             case R.id.exchangeBoard:
                 Intent intent3 = new Intent(getActivity().getBaseContext(),
-                        exchangeBoard.class);
+                        hackers.orbit.orbit.Boards.exchangeBoard.class);
                 intent3.putExtra("username", username);
                 intent3.putExtra("school", userSchool);
                 getActivity().startActivity(intent3);
                 break;
             case R.id.eventBoard:
                 Intent intent4 = new Intent(getActivity().getBaseContext(),
-                        eventBoard.class);
+                        hackers.orbit.orbit.Boards.eventBoard.class);
                 intent4.putExtra("username", username);
                 intent4.putExtra("school", userSchool);
                 getActivity().startActivity(intent4);
                 break;
             case R.id.sportBoard:
                 Intent intent5 = new Intent(getActivity().getBaseContext(),
-                        sportBoard.class);
+                        hackers.orbit.orbit.Boards.sportBoard.class);
                 intent5.putExtra("username", username);
                 intent5.putExtra("school", userSchool);
                 getActivity().startActivity(intent5);

@@ -3,6 +3,7 @@ package hackers.orbit.orbit;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.app.Fragment;
@@ -23,6 +24,7 @@ public class newInbox extends AppCompatActivity implements ViewPager.OnPageChang
     ViewPager viewPager;
     TabHost tabHost;
     String username;
+    ImageView refreshIcon;
     ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,18 @@ public class newInbox extends AppCompatActivity implements ViewPager.OnPageChang
         Bundle bundle = getIntent().getExtras();
         username = bundle.getString("username");
         back = (ImageView) findViewById(R.id.back);
+        refreshIcon = (ImageView) findViewById(R.id.refreshIcon);
+        refreshIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(newInbox.this, newInbox.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("username", username);
+                i.putExtras(bundle);
+                startActivity(i);
+                finish();
+            }
+        });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

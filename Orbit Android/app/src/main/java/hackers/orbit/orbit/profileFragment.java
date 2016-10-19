@@ -446,13 +446,22 @@ public class profileFragment extends Fragment implements View.OnClickListener {
         locateLayout.addRule(RelativeLayout.BELOW, R.id.title);
         locateLayout.addRule(RelativeLayout.RIGHT_OF, R.id.logo);
         if (category.equals("exchange")){
-            locate.setText(item);
+            if(item.length()<15)
+                locate.setText(item);
+            else
+                locate.setText(item.substring(0,13) + "...");
         }
         else if(category.equals("Services")){
-            locate.setText(nameEvent);
+            if(nameEvent.length()<15)
+                locate.setText(nameEvent);
+            else
+                locate.setText(nameEvent.substring(0,13) + "...");
         }
         else {
-            locate.setText(location);
+            if(location.length()<15)
+                locate.setText(location);
+            else
+                locate.setText(location.substring(0,13) + "...");
         }
         locate.setId(R.id.location);
 
@@ -463,7 +472,10 @@ public class profileFragment extends Fragment implements View.OnClickListener {
             nameEventsLayout.addRule(RelativeLayout.BELOW, R.id.title);
             nameEventsLayout.addRule(RelativeLayout.RIGHT_OF, R.id.logo);
             nameEvents.setLayoutParams(nameEventsLayout);
-            nameEvents.setText(nameEvent);
+            if (nameEvent.length()<10)
+                nameEvents.setText(nameEvent);
+            else
+                nameEvents.setText(nameEvent.substring(0,7) + "...");
             nameEvents.setId(R.id.nameEvents);
 
             relay.addView(nameEvents);
@@ -484,7 +496,10 @@ public class profileFragment extends Fragment implements View.OnClickListener {
         costLayout.addRule(RelativeLayout.BELOW, R.id.title);
         costLayout.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         cost.setLayoutParams(costLayout);
-        cost.setText(price);
+        if (price.length()<10)
+            cost.setText(price);
+        else
+            cost.setText(price.substring(0,7) + "...");
         cost.setTextColor(Color.parseColor("#c4d964"));
 
         relay.addView(cost);

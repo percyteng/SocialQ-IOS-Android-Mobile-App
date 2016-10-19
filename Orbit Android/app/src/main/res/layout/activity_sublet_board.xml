@@ -23,14 +23,9 @@
             android:layout_marginLeft="30dp"
             android:textSize="20dp"/>
     </android.support.v7.widget.Toolbar>
-    <ScrollView
-        android:layout_below="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
             <LinearLayout
+                android:layout_below="@+id/app_bar"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,7 +94,12 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_dropdown"/>
                 </RelativeLayout>
-
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:hint="Search"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -108,6 +108,11 @@
                     android:layout_marginLeft="10dp"
                     android:layout_below="@+id/post_1"
                     android:layout_marginTop="8dp"/>
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ListView>
 
                 <!--<RelativeLayout-->
                     <!--android:layout_width="match_parent"-->
@@ -355,8 +360,6 @@
                         <!--android:layout_marginBottom="20dp"/>-->
                 <!--</RelativeLayout>-->
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
     <ImageButton
         android:layout_width="58dp"
         android:layout_height="58dp"

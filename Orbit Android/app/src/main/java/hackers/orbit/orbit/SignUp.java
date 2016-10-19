@@ -225,6 +225,7 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener{
         Intent i = new Intent(this, NavigationHome.class);
         Bundle bundle = new Bundle();
         bundle.putString("username", "Visitor");
+        bundle.putString("school", "QUEENS");
         i.putExtras(bundle);
         startActivity(i);
         finish();

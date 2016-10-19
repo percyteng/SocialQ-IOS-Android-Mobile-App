@@ -70,7 +70,7 @@ public class messagePage extends AppCompatActivity {
                 Intent i = new Intent(messagePage.this, Compose.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("username", username);
-                bundle.putString("cameFrom", currentUser + " replied to your . :)");
+                bundle.putString("cameFrom", currentUser + " replied to your message. :)");
                 bundle.putString("currentUser", currentUser);
                 i.putExtras(bundle);
                 startActivity(i);

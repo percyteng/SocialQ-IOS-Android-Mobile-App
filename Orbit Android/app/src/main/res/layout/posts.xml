@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:id="@+id/relay"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/events"
+        android:id="@+id/logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:text="EVENTS"
+        android:id="@+id/title"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Name"
+        android:id="@+id/eventName"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Location:"
+        android:id="@+id/location"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/eventName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Delete"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:id="@+id/delete"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Price:"
+        android:layout_below="@+id/delete"
+        android:textColor="#c4d964"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:id="@+id/price"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

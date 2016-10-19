@@ -94,11 +94,12 @@ public class outbox extends Fragment {
                             if (result == 1) {
                                 Toast.makeText(getActivity().getBaseContext(), "Message deleted",
                                         Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(getActivity(), newInbox.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString("username", username);
-//                                Fragment outbox = new outboxClass();
-//                                outbox.setArguments(bundle);
-//                                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, outbox).commit();
+                                i.putExtras(bundle);
+                                startActivity(i);
+                                getActivity().finish();
                                 proDia.dismiss();
                             }
                             else {

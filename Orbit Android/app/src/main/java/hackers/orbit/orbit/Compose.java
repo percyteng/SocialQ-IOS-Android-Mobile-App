@@ -156,15 +156,17 @@ public class Compose extends Activity implements View.OnClickListener{
             int minutes = c.get(Calendar.MINUTE);
             String minute;
             int hour = c.get(Calendar.HOUR_OF_DAY);
-            if (etSubject.getText().toString().length() > 50)
-                etSubject.setError("Subject has to be shorter than 50 letters ");
-            else if (etContent.getText().toString().length() > 500)
-                etContent.setError("Message has to be shorter than 500 letters");
+
             if (minutes<10)
                 minute = "0" + Integer.toString(minutes);
             else
                 minute = Integer.toString(minutes);
-            sendMessage(hour,minute);
+            if (etSubject.getText().toString().length() > 45)
+                etSubject.setError("Subject has to be shorter than 45 letters ");
+            else if (etContent.getText().toString().length() > 500)
+                etContent.setError("Message has to be shorter than 500 letters");
+            else
+                sendMessage(hour,minute);
         }
     }
 }

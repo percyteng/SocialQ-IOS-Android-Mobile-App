@@ -30,61 +30,61 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".subletBoard"
+            android:name=".Boards.subletBoard"
             android:label="@string/title_activity_sublet_board"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".carPoolBoard"
+            android:name=".Boards.carPoolBoard"
             android:label="@string/title_activity_car_pool_board"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".exchangeBoard"
+            android:name=".Boards.exchangeBoard"
             android:label="@string/title_activity_exchange_board"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".serviceBoard"
+            android:name=".Boards.serviceBoard"
             android:label="@string/title_activity_service_board"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".sportBoard"
+            android:name=".Boards.sportBoard"
             android:label="@string/title_activity_sport_board"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".tutorBoard"
+            android:name=".Boards.tutorBoard"
             android:label="@string/title_activity_tutor_board"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".eventBoard"
+            android:name=".Boards.eventBoard"
             android:label="@string/title_activity_event_board"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".subletPost"
+            android:name=".createPosts.subletPost"
             android:label="@string/title_activity_sublet_post"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".createExchange"
+            android:name=".createPosts.createExchange"
             android:label="@string/title_activity_create_exchange"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".createRide"
+            android:name=".createPosts.createRide"
             android:label="@string/title_activity_create_ride"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
@@ -101,22 +101,22 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".createSports"
+            android:name=".createPosts.createSports"
             android:label="@string/title_activity_create_sports"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
         <activity
-            android:name=".createEvents"
+            android:name=".createPosts.createEvents"
             android:label="@string/title_activity_create_events"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
         <activity
-            android:name=".createTutors"
+            android:name=".createPosts.createTutors"
             android:label="@string/title_activity_create_tutors"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
         <activity
-            android:name=".createServices"
+            android:name=".createPosts.createServices"
             android:label="@string/title_activity_create_services"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
