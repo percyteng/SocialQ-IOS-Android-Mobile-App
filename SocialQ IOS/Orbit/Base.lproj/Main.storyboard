@@ -767,7 +767,7 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem image="ic_burger" style="plain" id="BU6-Fn-xhi"/>
-                                    <barButtonItem title="Campus" id="CVY-PE-WiZ"/>
+                                    <barButtonItem title="SocialQ" id="CVY-PE-WiZ"/>
                                     <barButtonItem image="ic_dropdown" id="rq4-nH-mdL"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bv0-ey-U48"/>
                                     <barButtonItem image="ic_refresh_white_36pt_2x" id="Cir-ZP-tzh"/>

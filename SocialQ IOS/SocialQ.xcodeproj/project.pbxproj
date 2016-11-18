@@ -110,16 +110,16 @@
 		024F182B1D0CBA84002D31BB /* Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		024F182D1D0CF8E8002D31BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0256D99B1D32C4AB00670555 /* ChangePass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePass.swift; sourceTree = "<group>"; };
-		0262DA801D08D653003065B5 /* Campus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Campus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0262DA801D08D653003065B5 /* SocialQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0262DA831D08D653003065B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0262DA851D08D653003065B5 /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
 		0262DA881D08D653003065B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0262DA8D1D08D653003065B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0262DA8F1D08D653003065B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0262DA941D08D654003065B5 /* CampusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0262DA941D08D654003065B5 /* SocialQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0262DA981D08D654003065B5 /* OrbitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitTests.swift; sourceTree = "<group>"; };
 		0262DA9A1D08D654003065B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0262DA9F1D08D654003065B5 /* CampusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0262DA9F1D08D654003065B5 /* SocialQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0262DAA31D08D654003065B5 /* OrbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitUITests.swift; sourceTree = "<group>"; };
 		0262DAA51D08D654003065B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02A871F01D4429210028E520 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -207,9 +207,9 @@
 		0262DA811D08D653003065B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0262DA801D08D653003065B5 /* Campus.app */,
-				0262DA941D08D654003065B5 /* CampusTests.xctest */,
-				0262DA9F1D08D654003065B5 /* CampusUITests.xctest */,
+				0262DA801D08D653003065B5 /* SocialQ.app */,
+				0262DA941D08D654003065B5 /* SocialQTests.xctest */,
+				0262DA9F1D08D654003065B5 /* SocialQUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,9 +292,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0262DA7F1D08D653003065B5 /* Campus */ = {
+		0262DA7F1D08D653003065B5 /* SocialQ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0262DAA81D08D654003065B5 /* Build configuration list for PBXNativeTarget "Campus" */;
+			buildConfigurationList = 0262DAA81D08D654003065B5 /* Build configuration list for PBXNativeTarget "SocialQ" */;
 			buildPhases = (
 				0262DA7C1D08D653003065B5 /* Sources */,
 				0262DA7D1D08D653003065B5 /* Frameworks */,
@@ -304,14 +304,14 @@
 			);
 			dependencies = (
 			);
-			name = Campus;
+			name = SocialQ;
 			productName = Orbit;
-			productReference = 0262DA801D08D653003065B5 /* Campus.app */;
+			productReference = 0262DA801D08D653003065B5 /* SocialQ.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0262DA931D08D654003065B5 /* CampusTests */ = {
+		0262DA931D08D654003065B5 /* SocialQTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0262DAAB1D08D654003065B5 /* Build configuration list for PBXNativeTarget "CampusTests" */;
+			buildConfigurationList = 0262DAAB1D08D654003065B5 /* Build configuration list for PBXNativeTarget "SocialQTests" */;
 			buildPhases = (
 				0262DA901D08D654003065B5 /* Sources */,
 				0262DA911D08D654003065B5 /* Frameworks */,
@@ -322,14 +322,14 @@
 			dependencies = (
 				0262DA961D08D654003065B5 /* PBXTargetDependency */,
 			);
-			name = CampusTests;
+			name = SocialQTests;
 			productName = OrbitTests;
-			productReference = 0262DA941D08D654003065B5 /* CampusTests.xctest */;
+			productReference = 0262DA941D08D654003065B5 /* SocialQTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0262DA9E1D08D654003065B5 /* CampusUITests */ = {
+		0262DA9E1D08D654003065B5 /* SocialQUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0262DAAE1D08D654003065B5 /* Build configuration list for PBXNativeTarget "CampusUITests" */;
+			buildConfigurationList = 0262DAAE1D08D654003065B5 /* Build configuration list for PBXNativeTarget "SocialQUITests" */;
 			buildPhases = (
 				0262DA9B1D08D654003065B5 /* Sources */,
 				0262DA9C1D08D654003065B5 /* Frameworks */,
@@ -340,9 +340,9 @@
 			dependencies = (
 				0262DAA11D08D654003065B5 /* PBXTargetDependency */,
 			);
-			name = CampusUITests;
+			name = SocialQUITests;
 			productName = OrbitUITests;
-			productReference = 0262DA9F1D08D654003065B5 /* CampusUITests.xctest */;
+			productReference = 0262DA9F1D08D654003065B5 /* SocialQUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -371,7 +371,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0262DA7B1D08D653003065B5 /* Build configuration list for PBXProject "Campus" */;
+			buildConfigurationList = 0262DA7B1D08D653003065B5 /* Build configuration list for PBXProject "SocialQ" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -384,9 +384,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0262DA7F1D08D653003065B5 /* Campus */,
-				0262DA931D08D654003065B5 /* CampusTests */,
-				0262DA9E1D08D654003065B5 /* CampusUITests */,
+				0262DA7F1D08D653003065B5 /* SocialQ */,
+				0262DA931D08D654003065B5 /* SocialQTests */,
+				0262DA9E1D08D654003065B5 /* SocialQUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -489,12 +489,12 @@
 /* Begin PBXTargetDependency section */
 		0262DA961D08D654003065B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0262DA7F1D08D653003065B5 /* Campus */;
+			target = 0262DA7F1D08D653003065B5 /* SocialQ */;
 			targetProxy = 0262DA951D08D654003065B5 /* PBXContainerItemProxy */;
 		};
 		0262DAA11D08D654003065B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0262DA7F1D08D653003065B5 /* Campus */;
+			target = 0262DA7F1D08D653003065B5 /* SocialQ */;
 			targetProxy = 0262DAA01D08D654003065B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -645,7 +645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theswiftproject.OrbitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Campus.app/Campus";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialQ.app/SocialQ";
 			};
 			name = Debug;
 		};
@@ -657,7 +657,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theswiftproject.OrbitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Campus.app/Campus";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialQ.app/SocialQ";
 			};
 			name = Release;
 		};
@@ -686,7 +686,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0262DA7B1D08D653003065B5 /* Build configuration list for PBXProject "Campus" */ = {
+		0262DA7B1D08D653003065B5 /* Build configuration list for PBXProject "SocialQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0262DAA61D08D654003065B5 /* Debug */,
@@ -695,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0262DAA81D08D654003065B5 /* Build configuration list for PBXNativeTarget "Campus" */ = {
+		0262DAA81D08D654003065B5 /* Build configuration list for PBXNativeTarget "SocialQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0262DAA91D08D654003065B5 /* Debug */,
@@ -704,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0262DAAB1D08D654003065B5 /* Build configuration list for PBXNativeTarget "CampusTests" */ = {
+		0262DAAB1D08D654003065B5 /* Build configuration list for PBXNativeTarget "SocialQTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0262DAAC1D08D654003065B5 /* Debug */,
@@ -713,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0262DAAE1D08D654003065B5 /* Build configuration list for PBXNativeTarget "CampusUITests" */ = {
+		0262DAAE1D08D654003065B5 /* Build configuration list for PBXNativeTarget "SocialQUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0262DAAF1D08D654003065B5 /* Debug */,
