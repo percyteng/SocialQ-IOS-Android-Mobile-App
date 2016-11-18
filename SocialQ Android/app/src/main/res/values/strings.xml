@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SocialQ</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_signin">Signin</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_sublet_board">subletBoard</string>
+    <string name="title_activity_car_pool_board">carPoolBoard</string>
+    <string name="title_activity_exchange_board">exchangeBoard</string>
+    <string name="title_activity_service_board">serviceBoard</string>
+    <string name="title_activity_sport_board">sportBoard</string>
+    <string name="title_activity_tutor_board">tutorBoard</string>
+    <string name="title_activity_event_board">eventBoard</string>
+    <string name="title_activity_create_posts">createPosts</string>
+    <string name="title_activity_sublet_post">subletPost</string>
+    <string name="title_activity_create_exchange">createExchange</string>
+    <string name="title_activity_create_ride">createRide</string>
+    <string name="title_activity_comments">Comments</string>
+    <string name="title_activity_otheruserprofile">otheruserprofile</string>
+    <string name="title_activity_create_sports">createSports</string>
+    <string name="title_activity_events_board">eventsBoard</string>
+    <string name="title_activity_create_events">createEvents</string>
+    <string name="title_activity_create_tutors">createTutors</string>
+    <string name="title_activity_create_services">createServices</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_walkthrough1">walkthrough1</string>
+    <string name="title_activity_walkthrough2">walkthrough2</string>
+    <string name="title_activity_change_password">changePassword</string>
+    <string name="title_activity_compose">Compose</string>
+    <string name="title_activity_message_page">messagePage</string>
+</resources>
