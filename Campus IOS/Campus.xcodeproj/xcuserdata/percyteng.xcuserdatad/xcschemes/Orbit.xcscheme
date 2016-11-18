@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0262DA7F1D08D653003065B5"
-               BuildableName = "Orbit.app"
-               BlueprintName = "Orbit"
-               ReferencedContainer = "container:Orbit.xcodeproj">
+               BuildableName = "Campus.app"
+               BlueprintName = "Campus"
+               ReferencedContainer = "container:Campus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0262DA931D08D654003065B5"
-               BuildableName = "OrbitTests.xctest"
-               BlueprintName = "OrbitTests"
-               ReferencedContainer = "container:Orbit.xcodeproj">
+               BuildableName = "CampusTests.xctest"
+               BlueprintName = "CampusTests"
+               ReferencedContainer = "container:Campus.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0262DA9E1D08D654003065B5"
-               BuildableName = "OrbitUITests.xctest"
-               BlueprintName = "OrbitUITests"
-               ReferencedContainer = "container:Orbit.xcodeproj">
+               BuildableName = "CampusUITests.xctest"
+               BlueprintName = "CampusUITests"
+               ReferencedContainer = "container:Campus.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0262DA7F1D08D653003065B5"
-            BuildableName = "Orbit.app"
-            BlueprintName = "Orbit"
-            ReferencedContainer = "container:Orbit.xcodeproj">
+            BuildableName = "Campus.app"
+            BlueprintName = "Campus"
+            ReferencedContainer = "container:Campus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0262DA7F1D08D653003065B5"
-            BuildableName = "Orbit.app"
-            BlueprintName = "Orbit"
-            ReferencedContainer = "container:Orbit.xcodeproj">
+            BuildableName = "Campus.app"
+            BlueprintName = "Campus"
+            ReferencedContainer = "container:Campus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0262DA7F1D08D653003065B5"
-            BuildableName = "Orbit.app"
-            BlueprintName = "Orbit"
-            ReferencedContainer = "container:Orbit.xcodeproj">
+            BuildableName = "Campus.app"
+            BlueprintName = "Campus"
+            ReferencedContainer = "container:Campus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
