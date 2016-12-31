@@ -29,6 +29,8 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Advertisement would like to store a photo.</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
