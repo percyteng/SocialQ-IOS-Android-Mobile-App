@@ -37,7 +37,10 @@ class Profile: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         }
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
-        let url = NSURL(string: "http://percyteng.com/orbit/pictures/\(username).JPG")
+        print(username)
+        let newString = username.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+        print(newString)
+        let url = NSURL(string: "http://percyteng.com/orbit/pictures/\(newString).JPG")
         let data = NSData(contentsOfURL:url!)
 
         if data != nil {
