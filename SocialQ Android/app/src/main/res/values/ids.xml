@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="logo" type="id"/>
+    <item name="title" type="id"/>
+    <item name="location" type="id"/>
+    <item name="heart" type="id"/>
+    <item name="nameEvents" type="id"/>
+    <item name="delete" type="id"/>
+</resources>

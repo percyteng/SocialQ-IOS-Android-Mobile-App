@@ -1,0 +1,161 @@
+<?xml version="1.1" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="percy.SocialQ.SocialQ">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="percy.SocialQ.SocialQ.NavigationHome"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Signin"
+            android:label="SocialQ"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.SignUp"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Boards.subletBoard"
+            android:label="@string/title_activity_sublet_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Boards.carPoolBoard"
+            android:label="@string/title_activity_car_pool_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Boards.exchangeBoard"
+            android:label="@string/title_activity_exchange_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Boards.serviceBoard"
+            android:label="@string/title_activity_service_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Boards.sportBoard"
+            android:label="@string/title_activity_sport_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Boards.tutorBoard"
+            android:label="@string/title_activity_tutor_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Boards.eventBoard"
+            android:label="@string/title_activity_event_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.createPosts.subletPost"
+            android:label="@string/title_activity_sublet_post"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.createPosts.createExchange"
+            android:label="@string/title_activity_create_exchange"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.createPosts.createRide"
+            android:label="@string/title_activity_create_ride"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Comments"
+            android:label="@string/title_activity_comments"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.otheruserprofile"
+            android:label="@string/title_activity_otheruserprofile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.createPosts.createSports"
+            android:label="@string/title_activity_create_sports"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.createPosts.createEvents"
+            android:label="@string/title_activity_create_events"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.createPosts.createTutors"
+            android:label="@string/title_activity_create_tutors"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.createPosts.createServices"
+            android:label="@string/title_activity_create_services"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Splash"
+            android:label="SocialQ"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="percy.SocialQ.SocialQ.walkthrough1"
+            android:label="@string/title_activity_walkthrough1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.changePassword"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.Compose"
+            android:label="@string/title_activity_compose"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.messagePage"
+            android:label="@string/title_activity_message_page"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="percy.SocialQ.SocialQ.newInbox"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
